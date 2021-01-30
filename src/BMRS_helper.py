@@ -146,8 +146,7 @@ def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-24',
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-#ndf
-#tsdf
+
 #imbalance volume
 #imbalance price
 
