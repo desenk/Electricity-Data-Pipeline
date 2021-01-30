@@ -54,6 +54,17 @@ def extract_data3(report_name, start_date, end_date):
     df = make_dataframe(report=report_name, FromDatetime=start_date+'%2000:00:00', ToDatetime=end_date+'%2000:00:00')
     return df
 
+def extract_data(report_name, start_date, end_date):
+    '''Extracts BMRS data regardless of the date formats. report_name follows the BMRS API guide.'''
+    for func in [extract_data1, extract_data2, extract_data3]:
+        try:   
+            df = func(report_name, start_date, end_date)
+            break
+        except Exception as err:
+            print (err)
+        continue
+    return df
+
 def demand(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''System demand data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'ROLSYSDEM'
