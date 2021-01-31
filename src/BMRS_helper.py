@@ -80,7 +80,7 @@ def demand(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def temperature(start_date, end_date, save_to_csv=False):
+def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''Daily average tempature in Britain, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'TEMP'
     df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
@@ -88,7 +88,7 @@ def temperature(start_date, end_date, save_to_csv=False):
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def generation(start_date, end_date, save_to_csv=False):
+def generation(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''Generation data by fuel type, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FUELHH'
     df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
@@ -133,7 +133,7 @@ def frequency(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False)
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
+def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''National day-ahead demand forecast data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FORDAYDEM'
     df = make_dataframe(report=report_name, FromDate=(start_date), ToDate=(end_date))
@@ -142,7 +142,7 @@ def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-24', sav
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
+def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''National day-ahead demand forecast data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FORDAYDEM'
     df = make_dataframe(report=report_name, FromDate=(start_date), ToDate=(end_date))
