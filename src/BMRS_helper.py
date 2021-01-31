@@ -152,6 +152,11 @@ def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-25',
     return df
 
 
-#imbalance volume
-#imbalance price
+def imbalance_volume(start_date='2020-03-24', period='1', save_to_csv=False):
+    '''Imbalance volume data from BMRS using report_name, start_date and period'''
+    report_name = 'B1780'
+    df = make_dataframe(report=report_name, SettlementDate=start_date, Period=period)
+    if save_to_csv == True:
+        df.to_csv(report_name+'_'+start_date+'.csv')
+    return df
 
