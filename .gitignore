@@ -3,6 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+<<<<<<< HEAD
+=======
+#api_key
+api_key.txt
+>>>>>>> separate-functions
 # C extensions
 *.so
 
