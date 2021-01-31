@@ -36,7 +36,7 @@ def make_dataframe(**kwargs):
         data = entry.getchildren()
         body.append(data)
     try:
-         df = pd.DataFrame(body, columns=header_dict)
+        df = pd.DataFrame(body, columns=header_dict)
     except:
         df = pd.DataFrame(body, columns=list(header_dict)[:len(body[0])])
     return df 
