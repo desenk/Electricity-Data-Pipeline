@@ -59,10 +59,11 @@ def extract_data3(report_name, start_date, end_date):
 def extract_data4(report_name, start_date, end_date):
     '''v3:extracts data from BMRS using report_name, start_date and end_Date'''
     df = make_dataframe(report=report_name, SettlementDate=start_date, Period='1')
+    return df
 
 def extract_data(report_name, start_date, end_date):
     '''Extracts BMRS data regardless of the date formats. report_name follows the BMRS API guide.'''
-    for func in [extract_data1, extract_data2, extract_data3]:
+    for func in [extract_data3, extract_data2, extract_data1, extract_data4]:
         try:   
             df = func(report_name, start_date, end_date)
             break
