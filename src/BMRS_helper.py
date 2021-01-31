@@ -35,9 +35,9 @@ def make_dataframe(**kwargs):
     for entry in import_data(**kwargs).findall("./responseBody/responseList/item"):
         data = entry.getchildren()
         body.append(data)
-    if len(body[0]) == len(list(header_dict)):
+    try:
          df = pd.DataFrame(body, columns=header_dict)
-    else:
+    except:
         df = pd.DataFrame(body, columns=list(header_dict)[:len(body[0])])
     return df 
 
