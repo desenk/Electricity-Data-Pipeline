@@ -22,8 +22,8 @@ Kirli, Desen; Kiprakis, Aristides; Parzen, Max. (2021). Impact of the COVID-19 L
 Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
 * You have installed `python` 3 and followed the instructions to download the required packages
-* Your working directory is set to 'your_machine\Electricity-Data-Pipeline'
-* You obtained an API key and pasted it in api_key.txt (lives in 'your_machine\Electricity-Data-Pipeline')
+* Your working directory is set to `your_machine\Electricity-Data-Pipeline`
+* You obtained an API key and pasted it in `api_key.txt` (lives in `your_machine\Electricity-Data-Pipeline`)
 * You have read the `examples`.
 
 ## Installing <Electricity-Data-Pipeline>
