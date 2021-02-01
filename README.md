@@ -82,10 +82,10 @@ $ pip install requirements.txt
 
 To use Electricity-Data-Pipeline, follow these steps:
 
-(1) Please check the Prerequisites section above
-(2) Obtain an API key from Elexon - follow the guidance [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
-(3) Save this API key in api_key.txt
-(4) Follow the examples to access the Great Britain electricity system data
+1. Please check the Prerequisites section above
+2. Obtain an API key from Elexon - follow the guidance [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
+3. Save this API key in api_key.txt
+4. Follow the examples to access the Great Britain electricity system data
 
 
 ## Contact
