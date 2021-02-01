@@ -1,8 +1,8 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-lxml>=4.6.1
-urllib3>=1.25.11
-pandas>=1.1.4
-numpy>=1.19.1
-matplotlib>=3.3.3
+lxml
+urllib3
+pandas
+numpy
+matplotlib

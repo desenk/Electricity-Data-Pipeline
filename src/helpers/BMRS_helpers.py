@@ -78,6 +78,8 @@ def demand(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     df = make_dataframe(report=report_name, FromDateTime=(start_date+'%2000:00:00'), ToDateTime=(end_date+'%2000:00:00'))
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
+
     return df
 
 def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
@@ -86,6 +88,8 @@ def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=Fals
     df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
+
     return df
 
 def generation(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -94,6 +98,7 @@ def generation(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False
     df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 def loss_of_load(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -102,6 +107,8 @@ def loss_of_load(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=Fal
     df = make_dataframe(report=report_name, FromSettlementDate=start_date, ToSettlementDate=end_date, recordType='LOLP')
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
+
     return df
 
 def initial_demand_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -111,6 +118,7 @@ def initial_demand_national(start_date='2020-03-24', end_date='2020-03-24', save
     df = df[df['recordType'] =='INDO']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 def initial_demand_transmission(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -120,6 +128,7 @@ def initial_demand_transmission(start_date='2020-03-24', end_date='2020-03-24', 
     df = df[df['recordType'] =='ITSDO']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 def frequency(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
@@ -128,6 +137,7 @@ def frequency(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False)
     df = make_dataframe(report=report_name, FromDateTime=(start_date+'%2000:00:00'), ToDateTime=(end_date+'%2000:00:00'))
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -137,6 +147,7 @@ def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-24', sav
     df = df[df['recordType'] == 'DANF']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -146,6 +157,7 @@ def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-24',
     df = df[df['recordType'] == 'DATF']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
 
@@ -155,6 +167,7 @@ def imbalance_volume(start_date='2020-03-24', period='1', save_to_csv=False):
     df = make_dataframe(report=report_name, SettlementDate=start_date, Period=period)
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'.csv')
     return df
 
 def imbalance_price(start_date='2020-03-24', period='1', save_to_csv=False):
@@ -163,4 +176,5 @@ def imbalance_price(start_date='2020-03-24', period='1', save_to_csv=False):
     df = make_dataframe(report=report_name, SettlementDate=start_date, Period=period)
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'.csv')
+        print('saved '+report_name+'_'+start_date+'.csv')
     return df

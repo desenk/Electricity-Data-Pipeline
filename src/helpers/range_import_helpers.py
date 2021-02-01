@@ -56,7 +56,7 @@ def iter_data_extract_without_helper(report_name = 'TEMP', start_date = '2020-03
         rel_start_date = rel_start_date+delta
     return df
 
-def data_extract_range_with_BMRS_label(report_name = 'TEMP', start_date = '2020-03-24', end_date =  '2020-03-25', save_to_csv = False):
+def extract_data_range_with_BMRS_label(report_name = 'TEMP', start_date = '2020-03-24', end_date =  '2020-03-25', save_to_csv = False):
     '''Extracts data using the BMRS labels. Inputs: BMRS label, start_date, end_date, save_to_csv'''
     df = iter_data_extract_without_helper(report_name, start_date, end_date)
     df = df.drop_duplicates().reset_index(drop=True)
