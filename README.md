@@ -8,10 +8,12 @@ The dataset used in this publication is also made available on DataShare. Hence,
 
 ## Publications
 ### Paper
+[link to paper](https://doi.org/10.3390/en14030635)
 ```
 Kirli, Desen; Parzen, Maximilian; Kiprakis, Aristides. 2021. "Impact of the COVID-19 Lockdown on the Electricity System of Great Britain: A Study on Energy Demand, Generation, Pricing and Grid Stability" Energies 14, no. 3: 635. https://doi.org/10.3390/en14030635
 ```
 ### Dataset
+[link to dataset](https://doi.org/10.7488/ds/2979)
 ```
 Kirli, Desen; Kiprakis, Aristides; Parzen, Max. (2021). Impact of the COVID-19 Lockdown on the Electricity System of Great Britain: A Study on Energy Demand, Generation, Pricing and Grid Stability, 2019-2020 [dataset]. University of Edinburgh. School of Engineering. Institute for Energy Systems. https://doi.org/10.7488/ds/2979.
 ```
