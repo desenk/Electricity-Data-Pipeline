@@ -73,7 +73,7 @@ default_week1
 # In[3]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 plt.style.use('seaborn')
 plt.plot(default_week1['fuelTypeGeneration'])
 
