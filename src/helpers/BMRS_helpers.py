@@ -88,7 +88,7 @@ def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=Fals
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def generation(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def generation(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''Generation data by fuel type, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FUELHH'
     df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
@@ -96,36 +96,33 @@ def generation(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def loss_of_load(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def loss_of_load(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''Loss of Load data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'LOLPDRM'
     df = make_dataframe(report=report_name, FromSettlementDate=start_date, ToSettlementDate=end_date, recordType='LOLP')
-    df = df[df['recordType'] =='LOLP']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-
-def initial_demand_national(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def initial_demand_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''Initial demand data on transmission and national level, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'INDOITSDO'
-    df = make_dataframe(report=report_name, FromSettlementDate=start_date, ToSettlementDate=end_date)
+    df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
     df = df[df['recordType'] =='INDO']
     if save_to_csv == True:
-        
-            df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
+        df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def initial_demand_transmission(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def initial_demand_transmission(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''Initial demand data on transmission and national level, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'INDOITSDO'
-    df = make_dataframe(report=report_name, FromSettlementDate=start_date, ToSettlementDate=end_date)
+    df = make_dataframe(report=report_name, FromDate=start_date, ToDate=end_date)
     df = df[df['recordType'] =='ITSDO']
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def frequency(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
+def frequency(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     '''System frequency data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FREQ'
     df = make_dataframe(report=report_name, FromDateTime=(start_date+'%2000:00:00'), ToDateTime=(end_date+'%2000:00:00'))
@@ -133,7 +130,7 @@ def frequency(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False)
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''National day-ahead demand forecast data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FORDAYDEM'
     df = make_dataframe(report=report_name, FromDate=(start_date), ToDate=(end_date))
@@ -142,7 +139,7 @@ def demand_forecast_national(start_date='2020-03-24', end_date='2020-03-25', sav
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
     return df
 
-def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
+def demand_forecast_transmission(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
     '''National day-ahead demand forecast data, inputs are start_date and end_date. Option to save as CSV'''
     report_name = 'FORDAYDEM'
     df = make_dataframe(report=report_name, FromDate=(start_date), ToDate=(end_date))
