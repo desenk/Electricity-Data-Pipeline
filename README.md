@@ -40,14 +40,14 @@ or
 git clone https://github.com/desenk/Electricity-Data-Pipeline.git
 ```
 
-then
+then if using Anaconda
 
 ```
-conda install requirements.txt
+$ conda create --name <env> --file <this file>
 ```
-or
+or just using pip
 ```
-pip install requirements.txt
+$ pip install requirements.txt
 ```
 ## Using Electricity-Data-Pipeline
 
