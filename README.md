@@ -17,7 +17,36 @@ Kirli, Desen; Parzen, Maximilian; Kiprakis, Aristides. 2021. "Impact of the COVI
 ```
 Kirli, Desen; Kiprakis, Aristides; Parzen, Max. (2021). Impact of the COVID-19 Lockdown on the Electricity System of Great Britain: A Study on Energy Demand, Generation, Pricing and Grid Stability, 2019-2020 [dataset]. University of Edinburgh. School of Engineering. Institute for Energy Systems. https://doi.org/10.7488/ds/2979.
 ```
+## Highlights
+Below is a list of all the `<Electricity-Data-Pipeline>` functions defined so far:
 
+_**Table 1:** List of the quick BMRS helper functions_
+
+`Electricity-Data-Pipeline` Quick Functions | Description | Resolution | Inputs 
+------------ | ------------- | ------------ | ------------
+**`demand()`** | Rolling System Demand | 5 min | demand(start_date = 'YYYY-MM-DD', end_date = 'YYYY-MM-DD', save_to_csv = False)
+**`temperature()`** | Average Daily Temperature in Britain | Daily  | "
+**`generation()`** | Half-hourly Generation by Fuel Type | Halfhourly (30 min) | "
+**`frequency()`** | System Frequency | 15 sec | "
+**`initial_demand_national()`** | Initial National Demand Out-turn | Halfhourly (30 min) | "
+**`initial_demand_transmission()`** | Initial Transmission System Demand Out-turn | Halfhourly (30 min) | "
+**`demand_forecast_national()`** | National Demand Forecast | Halfhourly (30 min) | "
+**`demand_forecast_transmission()`** | Transmission System Demand Forecast | Halfhourly (30 min) | "
+**`imbalance_volume()`** | Imbalance Volume | Halfhourly (30 min) | "
+**`loss_of_load()`** | Loss of Load and De-rated Margin | Halfhourly (30 min) | "
+**`imbalance_price()`** | Imbalance Price | Halfhourly (30 min) | "
+**`extract_data()`** | Uses BMRS data label and tries different methods | depends on dataset of choice | extract_data(report_name = 'TEMP', start_date = 'YYYY-MM-DD', end_date = 'YYYY-MM-DD', save_to_csv = True)
+
+_______________________________________________
+
+
+_**Table 2:** List of the data extractions functions for a week or longer periods._
+
+`Electricity-Data-Pipeline` Function for Weekly/Long-term Imports | Description | Range | Inputs 
+------------ | ------------- | ------------ | ------------
+**`extract_data_weekly()`** | Extracts data for a week from the start_date using the function names from the table above| Fixed - Weekly | extract_data_weekly(func_name = demand , start_date = 'YYYY-MM-DD', save_to_csv = True)
+**`extract_data_range()`** | Extracts data for long timeframes | Variable  | extract_data_range(func_name = temperature, start_date = 'YYYY-MM-DD', end_date =  'YYYY-MM-DD', save_to_csv = False)
+**`data_extract_range_with_BMRS_label()`** | Same as above but using BMRS report names rather than the function names from the table above | Variable | data_extract_range_with_BMRS_label(report_name = 'TEMP', start_date = 'YYYY-MM-DD', end_date =  'YYYY-MM-DD', save_to_csv = False)
 
 ## Prerequisites
 
@@ -43,7 +72,7 @@ git clone https://github.com/desenk/Electricity-Data-Pipeline.git
 then if using Anaconda
 
 ```
-$ conda create --name <env> --file <this file>
+$ conda create --name <env name> --file requirements.txt
 ```
 or just using pip
 ```
@@ -54,7 +83,7 @@ $ pip install requirements.txt
 To use Electricity-Data-Pipeline, follow these steps:
 
 (1) Please check the Prerequisites section above
-(2) Obtain an API key from Elexon
+(2) Obtain an API key from Elexon - follow the guidance [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
 (3) Save this API key in api_key.txt
 (4) Follow the examples to access the Great Britain electricity system data
 
