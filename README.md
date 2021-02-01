@@ -43,7 +43,7 @@ git clone https://github.com/desenk/Electricity-Data-Pipeline.git
 then if using Anaconda
 
 ```
-$ conda create --name <env> --file <this file>
+$ conda create --name <env name> --file requirements.txt
 ```
 or just using pip
 ```
