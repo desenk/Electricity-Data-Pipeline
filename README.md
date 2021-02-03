@@ -67,7 +67,7 @@ Before you begin, ensure you have met the following requirements:
 * You have installed `python 3` and followed the instructions to download the required packages
 * Your working directory is set to `your_machine\Electricity-Data-Pipeline`
 * You obtained an API key and pasted it in `api_key.txt` (lives in `your_machine\Electricity-Data-Pipeline`)
-1. Register on Elexon s a new user - [here](https://www.elexonportal.co.uk/registration/newuser?cachebust=3apx5qnzf9) 
+1. Register on Elexon's website a new user - [here](https://www.elexonportal.co.uk/registration/newuser?cachebust=3apx5qnzf9) 
 > Click on `sign-in`  ->  `register`
 2. Follow the instructions [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
 > Log-in -> Click on `my profile` -> Copy the `scripting key`
@@ -98,6 +98,8 @@ or just using pip
 ```
 $ pip install -r requirements.txt
 ```
+## More info about datasets and BMRS
+For more info about the BMRS and its user guide - [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
 
 ## Contact
 
@@ -114,3 +116,6 @@ This work is licensed under a
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+
+## Acknowledgement
+Contains BMRS data © Elexon Limited copyright and database right [2021] [license link] (https://www.elexon.co.uk/operations-settlement/bsc-central-services/balancing-mechanism-reporting-agent/copyright-licence-bmrs-data/)
