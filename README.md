@@ -1,4 +1,6 @@
-# Welcome to the Electricity-Data-Pipeline 👋
+# Welcome to the Electricity-Data-Pipeline 👋                        
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/desenk/Electricity-Data-Pipeline/blob/master)
+
 Electricity-Data-Pipeline is a tool that allows people in the field of energy systems to extract the Great Britain electricity market (a.k.a. balancing mechanism) data. The origin of the data is Balancing Mechanism Reporting Service [BMRS](https://www.bmreports.com/).
 
 This tool was developed as a means of easier data extraction for our paper on the impact of the first COVID-19 lockdown on the electricity system [here](https://doi.org/10.3390/en14030635).
@@ -17,8 +19,18 @@ Kirli, Desen; Parzen, Maximilian; Kiprakis, Aristides. 2021. "Impact of the COVI
 ```
 Kirli, Desen; Kiprakis, Aristides; Parzen, Max. (2021). Impact of the COVID-19 Lockdown on the Electricity System of Great Britain: A Study on Energy Demand, Generation, Pricing and Grid Stability, 2019-2020 [dataset]. University of Edinburgh. School of Engineering. Institute for Energy Systems. https://doi.org/10.7488/ds/2979.
 ```
+
+## Using Electricity-Data-Pipeline
+
+There are multiple ways to use the Electricity-Data-Pipeline:
+1. Google Colab: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/desenk/Electricity-Data-Pipeline/blob/master) to open our example notebooks.
+
+2. Please check the Prerequisites section below and proceed with your chosen interpreter.
+
+
 ## Highlights
-Below is a list of all the `<Electricity-Data-Pipeline>` functions defined so far:
+The `<Electricity-Data-Pipeline>` offers ready-to-use functions to import different sets of electricity data.
+Below is a list of all functions defined so far:
 
 _**Table 1:** List of the quick BMRS helper functions_
 
@@ -46,16 +58,24 @@ _**Table 2:** List of the data extractions functions for a week or longer period
 ------------ | ------------- | ------------ | ------------
 **`extract_data_weekly()`** | Extracts data for a week from the start_date using the function names from the table above| Fixed - Weekly | extract_data_weekly(func_name = demand , start_date = 'YYYY-MM-DD', save_to_csv = True)
 **`extract_data_range()`** | Extracts data for long timeframes | Variable  | extract_data_range(func_name = temperature, start_date = 'YYYY-MM-DD', end_date =  'YYYY-MM-DD', save_to_csv = False)
-**`data_extract_range_with_BMRS_label()`** | Same as above but using BMRS report names rather than the function names from the table above | Variable | data_extract_range_with_BMRS_label(report_name = 'TEMP', start_date = 'YYYY-MM-DD', end_date =  'YYYY-MM-DD', save_to_csv = False)
+**`extract_data_range_with_BMRS_label()`** | Same as above but using BMRS report names rather than the function names from the table above | Variable | data_extract_range_with_BMRS_label(report_name = 'TEMP', start_date = 'YYYY-MM-DD', end_date =  'YYYY-MM-DD', save_to_csv = False)
 
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 <!--- These are just example requirements. Add, duplicate or remove as required --->
-* You have installed `python` 3 and followed the instructions to download the required packages
+* You have installed `python 3` and followed the instructions to download the required packages
 * Your working directory is set to `your_machine\Electricity-Data-Pipeline`
 * You obtained an API key and pasted it in `api_key.txt` (lives in `your_machine\Electricity-Data-Pipeline`)
-* You have read the `examples`.
+1. Register on Elexon s a new user - [here](https://www.elexonportal.co.uk/registration/newuser?cachebust=3apx5qnzf9) 
+> Click on `sign-in`  ->  `register`
+2. Follow the instructions [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
+> Log-in -> Click on `my profile` -> Copy the `scripting key`
+3. Paste the API Key in the `api_key.txt` file
+4. Check that your API Key is saved correctly
+
+* Please check the example notebooks for more detailed information.
+
 
 ## Installing <Electricity-Data-Pipeline>
 
@@ -76,17 +96,8 @@ $ conda create --name <env name> --file requirements.txt
 ```
 or just using pip
 ```
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 ```
-## Using Electricity-Data-Pipeline
-
-To use Electricity-Data-Pipeline, follow these steps:
-
-1. Please check the Prerequisites section above
-2. Obtain an API key from Elexon - follow the guidance [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
-3. Save this API key in api_key.txt
-4. Follow the examples to access the Great Britain electricity system data
-
 
 ## Contact
 
