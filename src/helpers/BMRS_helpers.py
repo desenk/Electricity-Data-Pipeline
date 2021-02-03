@@ -79,7 +79,6 @@ def demand(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
         print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
-
     return df
 
 def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=False):
@@ -89,7 +88,6 @@ def temperature(start_date='2020-03-24', end_date='2020-03-25', save_to_csv=Fals
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
         print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
-
     return df
 
 def generation(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
@@ -108,7 +106,6 @@ def loss_of_load(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=Fal
     if save_to_csv == True:
         df.to_csv(report_name+'_'+start_date+'_'+end_date+'.csv')
         print('saved '+report_name+'_'+start_date+'_'+end_date+'.csv')
-
     return df
 
 def initial_demand_national(start_date='2020-03-24', end_date='2020-03-24', save_to_csv=False):
