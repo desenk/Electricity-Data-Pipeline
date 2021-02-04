@@ -16,8 +16,8 @@ Please ensure that you have an API key from Elexon
 
 # `Electricity-Data-Pipeline` Example 2
 # Import data for a week or more using Table 2 functions (See README.md).
-from src.helpers.BMRS_helpers import *
-from src.helpers.range_import_helpers import *
+from pipeline.BMRS_helpers import *
+from pipeline.range_import_helpers import *
 import matplotlib.pyplot as plt
 
 # Default example using extract_data_weekly()

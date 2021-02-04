@@ -1,25 +1,24 @@
 #!/usr/bin/env python
 # coding: utf-8
+"""
+#### _...Before we start..._
+##### _1. Check that you have the required packages_
+Please ensure you have `Python 3` and the listed items in the `requirements.txt` installed.
+##### _2. Get and check your API key_
+Please ensure that you have an API key from Elexon
+1. Register [here](https://www.elexonportal.co.uk/registration/newuser?cachebust=3apx5qnzf9)
+> Click on `sign-in`  ->  `register`
+2. Follow the instructions [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
+> Log-in -> Click on `my profile` -> Copy the `scripting key`
+3. Paste the API Key in the `api_key.txt` file
+4. Check that your API Key is saved correctly
 
-# __________________________
-# #### _...Before we start..._
-# ##### _1. Check that you have the required packages_
-# Please ensure you have `Python 3` and the listed items in the `requirements.txt` installed.
-# ##### _2. Get and check your API key_
-# Please ensure that you have an API key from Elexon
-# 1. Register [here](https://www.elexonportal.co.uk/registration/newuser?cachebust=3apx5qnzf9)
-# > Click on `sign-in`  ->  `register`
-# 2. Follow the instructions [here](https://www.elexon.co.uk/documents/training-guidance/bsc-guidance-notes/bmrs-api-and-data-push-user-guide-2/)
-# > Log-in -> Click on `my profile` -> Copy the `scripting key`
-# 3. Paste the API Key in the `api_key.txt` file
-# 4. Check that your API Key is saved correctly
-# __________________________
-
+"""
 # `Electricity-Data-Pipeline` Example 1
 
 # Import the `Electricity-Data-Pipeline` modules
-from src.helpers.BMRS_helpers import *
-from src.helpers.range_import_helpers import *
+from pipeline.BMRS_helpers import *
+from pipeline.range_import_helpers import *
 import matplotlib.pyplot as plt
 
 # Import raw data using quick BMRS helper function (See Table 1 in the README.md).
