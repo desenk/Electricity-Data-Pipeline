@@ -47,6 +47,7 @@ _**Table 1:** List of the quick BMRS helper functions_
 **`imbalance_volume()`** | Imbalance Volume | Halfhourly (30 min) | "
 **`loss_of_load()`** | Loss of Load and De-rated Margin | Halfhourly (30 min) | "
 **`imbalance_price()`** | Imbalance Price | Halfhourly (30 min) | "
+**`derived_system_data()`** | Derived System Data | Halfhourly (30 min) | "
 **`extract_data()`** | Uses BMRS data label and tries different methods | depends on dataset of choice | extract_data(report_name = 'TEMP', start_date = 'YYYY-MM-DD', end_date = 'YYYY-MM-DD', save_to_csv = True)
 
 _______________________________________________
