@@ -224,3 +224,18 @@ def imbalance_price(start_date="2020-03-24", period="1", save_to_csv=False):
         df.to_csv(report_name + "_" + start_date + ".csv")
         print("saved " + report_name + "_" + start_date + ".csv")
     return df
+
+def derived_system_data(start_date="2020-03-24", end_date="2020-03-24", save_to_csv=False):
+    """Derived system data, inputs are start_date and end_date. Option to save as CSV"""
+    report_name = "LOLPDRM"
+    df = make_dataframe(
+        report=report_name,
+        FromSettlementDate=start_date,
+        ToSettlementDate=end_date,
+        SettlementPeriod=*,
+        recordType="DERSYSDATA",
+    )
+    if save_to_csv == True:
+        df.to_csv(report_name + "_" + start_date + "_" + end_date + ".csv")
+        print("saved " + report_name + "_" + start_date + "_" + end_date + ".csv")
+    return df
