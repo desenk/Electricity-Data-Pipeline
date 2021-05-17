@@ -227,7 +227,7 @@ def imbalance_price(start_date="2020-03-24", period="1", save_to_csv=False):
 
 def derived_system_data(start_date="2020-03-24", end_date="2020-03-24", save_to_csv=False):
     """Derived system data, inputs are start_date and end_date. Option to save as CSV"""
-    report_name = "LOLPDRM"
+    report_name = "DERSYSDATA"
     df = make_dataframe(
         report=report_name,
         FromSettlementDate=start_date,
