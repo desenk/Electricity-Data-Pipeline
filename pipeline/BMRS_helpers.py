@@ -232,8 +232,8 @@ def derived_system_data(start_date="2020-03-24", end_date="2020-03-24", save_to_
         report=report_name,
         FromSettlementDate=start_date,
         ToSettlementDate=end_date,
-        SettlementPeriod=*,
-        recordType="DERSYSDATA",
+        SettlementPeriod='*',
+#         recordType="DERSYSDATA",
     )
     if save_to_csv == True:
         df.to_csv(report_name + "_" + start_date + "_" + end_date + ".csv")
